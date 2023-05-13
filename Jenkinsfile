@@ -6,8 +6,8 @@ node {
 
       stage('Fargate Task call') {
   steps {
-    withCredentials([usernamePassword(credentialsId: 'twistlockDefenderManager', passwordVariable: 'TL_PASS', usernameVariable: 'TL_USER')]) {
-      sh 'curl -s -k -u $TL_USER:$TL_PASS https://$TL_CONSOLE/api/v1/defenders/fargate.json?consoleaddr=$TL_CONSOLE -X POST -H "Content-Type:application/json" --data-binary "@fargate.json" | jq . > tw_fargate.json'
+    {
+      sh 'curl -s -k -u e54a0b24-5934-4cf0-94d7-b8765601b7de:TmGjLtV3DQc5k+CFW/90Uxg3l1s= https://us-east1.cloud.twistlock.com/api/v1/defenders/fargate.json?consoleaddr=$TL_CONSOLE -X POST -H "Content-Type:application/json" --data-binary "@fargate.json" | jq . > tw_fargate.json'
       sh 'cat tw_fargate.json'
     }
   }
