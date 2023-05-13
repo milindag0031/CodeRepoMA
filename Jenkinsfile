@@ -18,3 +18,4 @@ stage('Publish Function') {
     archiveArtifacts artifacts: 'tw_fargate.json'
   }
 }
+}
