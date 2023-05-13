@@ -11,7 +11,7 @@ node {
     }
   }
 }
-
+}
 stage('Publish Function') {
   steps {
     archiveArtifacts artifacts: 'tw_fargate.json'
