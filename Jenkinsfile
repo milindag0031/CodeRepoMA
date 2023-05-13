@@ -1,4 +1,3 @@
-Copy code
 node {
   stage('Clone repository') {
     checkout scm
